@@ -46,3 +46,11 @@ These rules apply to every agent on the AI-Native Work Tracker: the three full-s
 ## 7. Blog material
 
 - When something surprising, broken or instructive happens, add a short note to the ticket so it can feed the weekly Journey post or an Under the Hood deep dive.
+
+## 8. Spec first, code second
+
+- Every story has a written spec in the repo before any code is written. The spec lives at docs/specs/ANWT-\<number>-short-name.md.
+- Developers build to the spec. QA tests against the spec. The UAT agent checks behaviour against the spec. The PM/BA agent confirms a spec exists before a ticket enters a sprint.
+- If the spec is wrong, unclear or missing something, stop. Fix the spec first, in its own pull request, approved by the human. Never quietly change the behaviour in code and leave the spec behind.
+- A pull request that changes behaviour must change the spec in the same pull request, and say so.
+- Specs are reviewed and approved by the human before development starts. Status moves from Draft to Approved.
